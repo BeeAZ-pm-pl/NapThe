@@ -1,0 +1,18 @@
+DOANHTHU: 0
+
+WEBSITE: thesieure.com
+
+ID: 55930393058
+KEY: bb8ff92d2fd55930393058aadeb3d773
+
+TEXT: "Alalsksjjsksk"
+PLUGIN: CoinAPI
+FUNCTION: addCoin
+BONUS: 1
+RATE: 1000
+
+STATUS: "Thẻ Đang Xử Lí"
+THELOI: "Thẻ Lỗi"
+BAOTRI: "Nhà Mạng Bảo Trì"
+BROADCAST: "Cảm ơn bạn {NAME} đã donate {AMOUNT} ủng hộ máy chủ"
+BROADCAST-SAIMENHGIA: "Cảm ơn bạn {NAME} đã donate nhưng vì sai mệnh giá nên thẻ của bạn chỉ còn 50% là {AMOUNT}"
