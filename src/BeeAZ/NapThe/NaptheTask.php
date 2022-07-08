@@ -93,7 +93,7 @@ class NaptheTask extends Task{
           $function = $this->plugin->cfg->get("FUNCTION");
           $rate = $this->plugin->cfg->get("RATE");
           $bonus = $this->plugin->cfg->get("BONUS");
-          $api->$function(($this->amount / $rate) * $bonus);
+          $api->$function($player, ($this->amount / $rate) * $bonus);
           }
   }
   
@@ -109,7 +109,7 @@ class NaptheTask extends Task{
           $function = $this->plugin->cfg->get("FUNCTION");
           $rate = $this->plugin->cfg->get("RATE");
           $bonus = $this->plugin->cfg->get("BONUS");
-          $api->$function((($this->amount / $rate) / 2) * $bonus);
+          $api->$function($player, (($this->amount / $rate) / 2) * $bonus);
        }
   }
   
