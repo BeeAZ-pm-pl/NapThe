@@ -53,26 +53,26 @@ class NaptheTask extends Task{
                break;
                case 1:
                if($this->player->isOnline()){
-               $this->theDungForm($this->player);
+               $this->theDung($this->player);
                }
                break;
                case 2:
                if($this->player->isOnline()){
-               $this->theSaiMenhGiaForm($this->player);
+               $this->theSaiMenhGia($this->player);
                }
                break;
                case 3:
                if($this->player->isOnline()){
-               $this->theLoiForm($this->player);
+               $this->theLoi($this->player);
                }
                break;
                case 4:
                if($this->player->isOnline()){
-               $this->baoTriForm($this->player);
+               $this->baoTri($this->player);
                }
                break;   
                default:
-               $this->theLoiForm($this->player);
+               $this->theLoi($this->player);
                break;
                }
          }else{
@@ -81,7 +81,7 @@ class NaptheTask extends Task{
          }
      }
   
-  private function theDungForm($player){
+  private function theDung($player){
           if($this->player->isOnline()){
           $sql = $this->plugin->db->prepare("UPDATE dulieu SET data = data + :amount WHERE donater = :name");
           $sql->bindValue(":amount", $this->amount);
@@ -97,7 +97,7 @@ class NaptheTask extends Task{
           }
   }
   
-  private function theSaiMenhGiaForm($player){
+  private function theSaiMenhGia($player){
       if($this->player->isOnline()){
           $sql = $this->plugin->db->prepare("UPDATE dulieu SET data = data + :amount WHERE donater = :name");
           $sql->bindValue(":amount", $this->amount/2);
@@ -113,13 +113,13 @@ class NaptheTask extends Task{
        }
   }
   
-  private function theLoiForm($player){
+  private function theLoi($player){
          if($player->isOnline()){
          $player->sendMessage($this->plugin->cfg->get("THELOI"));
          }
   }
   
-  private function baoTriForm($player){
+  private function baoTri($player){
          if($player->isOnline()){
          $player->sendMessage($this->plugin->cfg->get("BAOTRI"));
          }
